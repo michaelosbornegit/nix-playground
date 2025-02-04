@@ -1,0 +1,65 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1738435198,
+        "narHash": "sha256-5+Hmo4nbqw8FrW85FlNm4IIrRnZ7bn0cmXlScNsNRLo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f6687779bf4c396250831aa5a32cbfeb85bb07a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1738435198,
+        "narHash": "sha256-5+Hmo4nbqw8FrW85FlNm4IIrRnZ7bn0cmXlScNsNRLo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f6687779bf4c396250831aa5a32cbfeb85bb07a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "parent": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "dir": "inheritance/parent",
+        "lastModified": 1738652738,
+        "narHash": "sha256-C/WYgrxFzjkZgZt5EQExeRpArD4zVEc1x4+XVji8S1w=",
+        "owner": "michaelosbornegit",
+        "repo": "nix-playground",
+        "rev": "0e3d58cbe350e49915e87205bd8ca24db0ea1bd4",
+        "type": "github"
+      },
+      "original": {
+        "dir": "inheritance/parent",
+        "owner": "michaelosbornegit",
+        "repo": "nix-playground",
+        "rev": "0e3d58cbe350e49915e87205bd8ca24db0ea1bd4",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "parent": "parent"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

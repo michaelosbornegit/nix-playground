@@ -25,8 +25,6 @@
 
             shellHook = ''
               echo "Welcome to the PARENT devshell!"
-              echo "Installed packages: requests"
-              echo "Additional packages (if any): ${builtins.toJSON extraPackages}"
             '';
           };
 
