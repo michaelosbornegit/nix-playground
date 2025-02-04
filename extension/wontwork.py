@@ -1,5 +1,5 @@
-# This will NOT work with parent
-# this WILL work with child
+# This will NOT work with parent flake
+# this WILL work with child flake
 import requests
 
 result = requests.get('https://example.com')
