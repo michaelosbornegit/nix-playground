@@ -10,11 +10,11 @@
     in {
       devShells.${system} = rec {
         # This 'base' is a FUNCTION that accepts extraPackages.
-        base = { extraPackages ? [] }:
+        base = { extraPackages ? (python-pkgs: []) }:
           let
             pythonWithPackages = (pkgs.python3.withPackages (python-pkgs: [
               python-pkgs.requests
-            ] ++ extraPackages));
+            ] ++ extraPackages python-pkgs));
           in
           pkgs.mkShell {
             name = "Python base shell";

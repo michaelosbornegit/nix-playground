@@ -3,7 +3,7 @@
 
   inputs = {
     # Replace the URL or path to your parent's flake below.
-    parent.url = "path:../parent";
+    parent.url = "github:michaelosbornegit/nix-playground/inheritance/parent";
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
@@ -16,17 +16,10 @@
     {
       devShells.${system}.default = 
         parent.devShells.${system}.base {
-          # The child can add more VSCode extensions
-          extraExtensions = [
-            pkgs.vscode-extensions.hashicorp.terraform
-            pkgs.vscode-extensions.esbenp.prettier-vscode
+          # The child can add more python packages
+          extraExtensions = python-pkgs: [
+            python-pkgs.preggy
           ];
-
-          # Possibly override or extend settings if your logic supports them
-          extraSettings = {
-            "editor.formatOnSave" = true;
-            "python.analysis.typeCheckingMode" = "strict";
-          };
         };
     };
 }
