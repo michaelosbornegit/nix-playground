@@ -3,7 +3,7 @@
 
   inputs = {
     # Replace the URL or path to your parent's flake below.
-    parent.url = "github:michaelosbornegit/nix-playground?rev=0e3d58cbe350e49915e87205bd8ca24db0ea1bd4&dir=inheritance/parent";
+    parent.url = "github:michaelosbornegit/nix-playground?rev=3eced418ef910146d679b07597d5233a10a99cb9&dir=inheritance/parent";
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
@@ -20,10 +20,11 @@
           extraPackages = python-pkgs: [
             python-pkgs.preggy
           ];
-        };
 
-        shellHook = ''
-          echo "Welcome to the CHILD devshell!"
-        '';
+          # The child can also add a shellHook
+          shellHook = ''
+            echo "Hello from the child devshell!"
+          '';
+        };
     };
 }

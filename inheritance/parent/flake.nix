@@ -10,7 +10,7 @@
     in {
       devShells.${system} = rec {
         # This 'base' is a FUNCTION that accepts extraPackages.
-        base = { extraPackages ? (python-pkgs: []) }:
+        base = { extraPackages ? (python-pkgs: []), shellHook ? "" }:
           let
             pythonWithPackages = (pkgs.python3.withPackages (python-pkgs: [
               python-pkgs.requests
@@ -23,13 +23,11 @@
               pythonWithPackages
             ];
 
-            shellHook = ''
-              echo "Welcome to the PARENT devshell!"
-            '';
+            shellHook = shellHook;
           };
 
         # Provide the flake’s "default" devShell by calling base with no extras
-        default = base { };
+        default = base { shellHook = ''echo "Hello from the parent devshell!"''; };
       };
     };
 }

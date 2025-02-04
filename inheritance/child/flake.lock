@@ -38,18 +38,18 @@
       },
       "locked": {
         "dir": "inheritance/parent",
-        "lastModified": 1738652738,
-        "narHash": "sha256-C/WYgrxFzjkZgZt5EQExeRpArD4zVEc1x4+XVji8S1w=",
+        "lastModified": 1738653487,
+        "narHash": "sha256-FhQ05WVtTObMk9OSqAK9/AfnMB+mmC1MSiccbKXhTVc=",
         "owner": "michaelosbornegit",
         "repo": "nix-playground",
-        "rev": "0e3d58cbe350e49915e87205bd8ca24db0ea1bd4",
+        "rev": "3eced418ef910146d679b07597d5233a10a99cb9",
         "type": "github"
       },
       "original": {
         "dir": "inheritance/parent",
         "owner": "michaelosbornegit",
         "repo": "nix-playground",
-        "rev": "0e3d58cbe350e49915e87205bd8ca24db0ea1bd4",
+        "rev": "3eced418ef910146d679b07597d5233a10a99cb9",
         "type": "github"
       }
     },
