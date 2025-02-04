@@ -12,11 +12,9 @@
         # This 'base' is a FUNCTION that accepts extraPackages.
         base = { extraPackages ? [] }:
           let
-            basePackages = [
+            pythonWithPackages = (pkgs.python3.withPackages (python-pkgs: [
               python-pkgs.requests
-            ];
-            allPackages = basePackages ++ extraPackages;
-            pythonWithPackages = pkgs.python3.withPackages (python-pkgs: allPackages)
+            ] ++ extraPackages));
           in
           pkgs.mkShell {
             name = "Python base shell";
@@ -27,8 +25,8 @@
 
             shellHook = ''
               echo "Welcome to the PARENT devshell!"
-              echo "Installed VSCode extensions: ${builtins.toString allPackages}"
-              echo "Additional settings (if any): ${builtins.toJSON extraSettings}"
+              echo "Installed packages: requests"
+              echo "Additional packages (if any): ${builtins.toJSON extraPackages}"
             '';
           };
 

@@ -1,12 +1,11 @@
 {
-  description = "Child devshell flake: Extends parent's VSCode environment";
+  description = "Parent devshell flake: Extends parents python environment";
 
   inputs = {
     # Replace the URL or path to your parent's flake below.
     parent.url = "path:../parent";
 
-    # We still need nixpkgs ourselves in most flake setups
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
   outputs = { self, parent, nixpkgs, ... }:
