@@ -3,7 +3,7 @@
 
   inputs = {
     # Replace the URL or path to your parent's flake below.
-    parent.url = "github:michaelosbornegit/nix-playground?rev=3eced418ef910146d679b07597d5233a10a99cb9&dir=inheritance/parent";
+    parent.url = "github:michaelosbornegit/nix-playground?rev=43614b352768f9ff02680e1f91cace399f05538d&dir=inheritance/parent";
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
